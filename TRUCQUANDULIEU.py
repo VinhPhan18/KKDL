@@ -20,6 +20,7 @@
 # # Kiểm tra các giá trị null trong tập dữ liệu
 # print(df.isnull())
 
+#####___________________________________________________________#####
 
 
 
@@ -39,6 +40,7 @@
 # plt.show()
 
 
+#####___________________________________________________________#####
 
 
 # ##cot du lieu top-middle-square
@@ -58,6 +60,8 @@
 # # Hiển thị biểu đồ
 # plt.show()
 
+#####___________________________________________________________#####
+
 
 # import pandas as pd
 # import seaborn as sns
@@ -75,6 +79,8 @@
 # # Hiển thị plot
 # plt.show()
 
+#####___________________________________________________________#####
+
 
 # import pandas as pd
 # import seaborn as sns
@@ -91,6 +97,8 @@
 
 # # Hiển thị plot
 # plt.show()
+
+#####___________________________________________________________#####
 
 
 # import pandas as pd
@@ -111,6 +119,7 @@
 # # Hiển thị biểu đồ
 # plt.show()
 
+#####___________________________________________________________#####
 
 
 # import pandas as pd
@@ -131,6 +140,7 @@
 # # Hiển thị biểu đồ
 # plt.show()
 
+#####___________________________________________________________#####
 
 
 # import pandas as pd
@@ -149,6 +159,7 @@
 # # Hiển thị plot
 # plt.show()
 
+#####___________________________________________________________#####
 
 
 # import pandas as pd
@@ -174,6 +185,7 @@
 # plt.show()
 
 
+#####___________________________________________________________#####
 
 # import pandas as pd
 # import seaborn as sns
@@ -217,6 +229,7 @@
 # # Hiển thị biểu đồ
 # plt.show()
 
+#####___________________________________________________________#####
 
 
 # import pandas as pd
@@ -245,7 +258,7 @@
 
 # # Hiển thị biểu đồ
 # plt.show()
-
+#####___________________________________________________________#####
 
 # ###Mối tương quan giữa các biếnb
 ####vẽ biểu đồ tần suất cho mỗi vị trí trên bàn cờ
@@ -271,79 +284,5 @@
 
 
 
-
-# ##sử dụng phương pháp Decision Tree để dự đoán kết quả trận đấu Tic-Tac-Toe Endgame
-# from sklearn.tree import DecisionTreeClassifier
-# from sklearn.metrics import accuracy_score
-# import pandas as pd
-# import numpy as np
-
-# # Đọc dữ liệu từ file csv
-# df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/tic-tac-toe/tic-tac-toe.data', header=None)
-
-# # Đặt tên cho các cột
-# df.columns = ['top_left', 'top_middle', 'top_right', 'middle_left', 'middle_middle', 'middle_right', 'bottom_left', 'bottom_middle', 'bottom_right', 'class']
-
-# # Chuyển các giá trị không số thành số
-# df['class'] = np.where(df['class'] == 'positive', 1, 0)
-# df = pd.get_dummies(df)
-
-# # Tách tập huấn luyện và tập kiểm tra
-# train = df.sample(frac=0.8, random_state=123)
-# test = df.drop(train.index)
-
-# # Tạo mô hình Decision Tree
-# model = DecisionTreeClassifier(max_depth=3)
-
-# # Huấn luyện mô hình
-# model.fit(train.iloc[:, :-1], train.iloc[:, -1])
-
-# # Dự đoán trên tập kiểm tra
-# y_pred = model.predict(test.iloc[:, :-1])
-
-# # Tính độ chính xác của mô hình
-# accuracy = accuracy_score(test.iloc[:, -1], y_pred)
-
-# # In ra độ chính xác của mô hình
-# print("Độ chính xác của mô hình Decision Tree là:", accuracy)
-
-
-
-
-###mo hinh RandomForestClassifier
-# from sklearn.ensemble import RandomForestClassifier
-# from sklearn.metrics import accuracy_score
-# import pandas as pd
-# import numpy as np
-
-# # Đọc dữ liệu từ file csv
-# df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/tic-tac-toe/tic-tac-toe.data', header=None)
-
-# # Đặt tên cho các cột
-# df.columns = ['top_left', 'top_middle', 'top_right', 'middle_left', 'middle_middle', 'middle_right', 'bottom_left', 'bottom_middle', 'bottom_right', 'class']
-
-# # Chuyển các giá trị không số thành số
-# df['class'] = np.where(df['class'] == 'positive', 1, 0)
-# df = pd.get_dummies(df)
-
-# # Tách tập huấn luyện và tập kiểm tra
-# train = df.sample(frac=0.8, random_state=123)
-# test = df.drop(train.index)
-
-# # Tạo mô hình Random Forest
-# model = RandomForestClassifier(n_estimators=100, max_depth=3)
-
-# # Huấn luyện mô hình
-# model.fit(train.iloc[:, :-1], train.iloc[:, -1])
-
-# # Dự đoán trên tập kiểm tra
-# y_pred = model.predict(test.iloc[:, :-1])
-
-# # Tính độ chính xác của mô hình
-# accuracy = accuracy_score(test.iloc[:, -1], y_pred)
-
-# # In ra độ chính xác của mô hình
-# print("Độ chính xác của mô hình RandomForest:", accuracy)
-
-
+ 
 
